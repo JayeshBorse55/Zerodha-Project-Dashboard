@@ -1,22 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Orders = () => {
-//   return (
-//     <div className="orders">
-//       <div className="no-orders">
-//         <p>You haven't placed any orders today</p>
-
-//         <Link to={"/"} className="btn">
-//           Get started
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Orders;
-
 import React from "react";
 import { useState,useEffect } from "react";
 import axios from "axios";
@@ -26,7 +7,7 @@ const Orders = () => {
   const [allOrders,setAllOrders] = useState([]);
 
   useEffect(()=>{
-    axios.get("https://zerodha-project-backend-1.onrender.com/allHoldings/allOrders").then((res)=>{
+    axios.get("https://zerodha-project-backend-1.onrender.com/allOrders").then((res)=>{
       console.log(res.data);
       setAllOrders(res.data);
     })
